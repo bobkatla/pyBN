@@ -16,3 +16,4 @@ dist
 *.egg-info
 .eggs
 pyBN.egg-info
+*VISTA_2012_16_v1_SA1_CSV
