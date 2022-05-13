@@ -43,7 +43,7 @@ def popSyn_get_df():
 
     # print(df_work)
     # print(df_work.shape)
-    seed_df = df_work.sample(n = 10000)
+    seed_df = df_work.sample(n = 17000)
     return seed_df
 
 
@@ -55,7 +55,8 @@ if __name__ == "__main__":
     bn = tabu(data, debug=False)
     # bn = hc(data, debug=True)
     bayes_estimator(bn, data)
-    print(bn.F)
+    # print(bn.F)
     plot_nx(bn)
-    resu = forward_sample(bn, n=100)
-    print(resu)
+    resu = forward_sample(bn, n=5)
+    # print(resu)
+    print('DONE')

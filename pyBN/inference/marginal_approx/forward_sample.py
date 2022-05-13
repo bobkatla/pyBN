@@ -47,27 +47,34 @@ def forward_sample(bn, n=1000):
 		for val in bn.values(var):
 			sample_dict[var][val] = 0
 
-	for i in range(n):
+	samples = []
+	for _ in range(n):
 		#if i % (n/float(10)) == 0:
 			#   print 'Sample: ' , i
 		new_sample = {}
 		for rv in bn.nodes():
 			f = Factor(bn,rv)
 			for p in bn.parents(rv):
-				f.reduce_factor(p,new_sample[p])
+				if p not in new_sample:
+					# REALLY NEED TO CHECK AGAIN WITH THIS DEFAUL ZERO
+					f.reduce_factor(p,0)
+				else:
+					f.reduce_factor(p,new_sample[p])
 			choice_vals = bn.values(rv)
 			choice_probs = f.cpt
 			# Bob code to handle not sum to 1
 			diff = float(sum(choice_probs) - 1)
+			# TODO: instead of the first maybe pick the max to avoid negative number
 			f.cpt[0] -= diff
 
 			chosen_val = np.random.choice(a=choice_vals, p=choice_probs)
 
 			sample_dict[rv][chosen_val] += 1
 			new_sample[rv] = chosen_val
+		samples.append(new_sample)
 
 	for rv in sample_dict:
 		for val in sample_dict[rv]:
 			sample_dict[rv][val] = int(sample_dict[rv][val]) / float(n)
 
-	return sample_dict
+	return sample_dict, samples
