@@ -4,16 +4,17 @@ from pyBN.learning.structure.score.tabu import tabu
 from pyBN.learning.structure.score.hill_climbing import hc
 from pyBN.plotting.plot import plot_nx
 from pyBN.inference.marginal_approx.gibbs_sample import gibbs_sample
+from pyBN.inference.marginal_approx.forward_sample import forward_sample
 from checker import SRMSE
 
 if __name__ == "__main__":
     ATTRIBUTES = ['AGEGROUP', 'CARLICENCE', 'SEX', 'PERSINC', 'DWELLTYPE', 'TOTALVEHS']
     
     # import data
-    p_original_df = pd.read_csv("./data/VISTA_2012_16_v1_SA1_CSV/P_VISTA12_16_SA1_V1.csv")
+    p_original_df = pd.read_csv("../data/VISTA_2012_16_v1_SA1_CSV/P_VISTA12_16_SA1_V1.csv")
     # Only have record of the main person (the person that did the survey)
     p_self_df = p_original_df[p_original_df['RELATIONSHIP']=='Self']
-    h_original_df = pd.read_csv("./data/VISTA_2012_16_v1_SA1_CSV/H_VISTA12_16_SA1_V1.csv")
+    h_original_df = pd.read_csv("../data/VISTA_2012_16_v1_SA1_CSV/H_VISTA12_16_SA1_V1.csv")
 
     orignal_df = pd.merge(p_self_df, h_original_df, on=['HHID'])
     df = orignal_df[ATTRIBUTES].dropna()
@@ -42,7 +43,9 @@ if __name__ == "__main__":
 
     data = seed_df.to_numpy()
     # print(data)
-    bn = tabu(data, debug=True)
+    bn = tabu(data, debug=False)
     # bn = hc(data, debug=True)
-    # print(bn.E)
-    # plot_nx(bn)
+    print(bn.E)
+    plot_nx(bn)
+    # resu = forward_sample(bn)
+    # print(resu)
