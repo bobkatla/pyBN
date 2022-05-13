@@ -80,7 +80,7 @@ def tabu(data, k=5, metric='AIC', max_iter=100, debug=False, restriction=None):
 	
 	# COMPUTE INITIAL LIKELIHOOD SCORE	
 	value_dict = dict([(n, np.unique(data[:,i])) for i,n in enumerate(names)])
-	bn = BayesNet(c_dict)
+	bn = BayesNet(E=c_dict, value_dict=value_dict)
 	mle_estimator(bn, data)
 	max_score = info_score(bn, nrow, metric)
 
@@ -208,7 +208,7 @@ def tabu(data, k=5, metric='AIC', max_iter=100, debug=False, restriction=None):
 			break
 
 	
-	bn = BayesNet(c_dict)
+	bn = BayesNet(c_dict, value_dict=value_dict)
 
 	return bn
 
