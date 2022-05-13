@@ -584,7 +584,7 @@ class Factor(object):
 
         """
         exp_len = len(self.cpt)/float(self.card[rv])
-        new_cpt = np.zeros((exp_len,))
+        new_cpt = np.zeros((int(exp_len),))
 
         val_idx = self.bn.F[rv]['values'].index(val)
         rv_card = self.card[rv]
@@ -593,7 +593,7 @@ class Factor(object):
         add_idx=0
         idx = val_idx*rv_stride
         while add_idx < exp_len:
-            for j in self.cpt[idx:(idx+rv_stride)]:
+            for j in self.cpt[int(idx):int(idx+rv_stride)]:
                 new_cpt[add_idx] = j
                 add_idx+=1
             idx+=rv_card*rv_stride

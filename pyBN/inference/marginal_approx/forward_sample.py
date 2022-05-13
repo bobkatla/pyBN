@@ -43,27 +43,31 @@ def forward_sample(bn, n=1000):
 
 	sample_dict = {}
 	for var in bn.nodes():
-	    sample_dict[var] = {}
-	    for val in bn.values(var):
-	        sample_dict[var][val] = 0
+		sample_dict[var] = {}
+		for val in bn.values(var):
+			sample_dict[var][val] = 0
 
 	for i in range(n):
-	    #if i % (n/float(10)) == 0:
-	     #   print 'Sample: ' , i
-	    new_sample = {}
-	    for rv in bn.nodes():
-	        f = Factor(bn,rv)
-	        for p in bn.parents(rv):
-	            f.reduce_factor(p,new_sample[p])
-	        choice_vals = bn.values(rv)
-	        choice_probs = f.cpt
-	        chosen_val = np.random.choice(choice_vals, p=choice_probs)
+		#if i % (n/float(10)) == 0:
+			#   print 'Sample: ' , i
+		new_sample = {}
+		for rv in bn.nodes():
+			f = Factor(bn,rv)
+			for p in bn.parents(rv):
+				f.reduce_factor(p,new_sample[p])
+			choice_vals = bn.values(rv)
+			choice_probs = f.cpt
+			# Bob code to handle not sum to 1
+			diff = float(sum(choice_probs) - 1)
+			f.cpt[0] -= diff
 
-	        sample_dict[rv][chosen_val] += 1
-	        new_sample[rv] = chosen_val
+			chosen_val = np.random.choice(a=choice_vals, p=choice_probs)
+
+			sample_dict[rv][chosen_val] += 1
+			new_sample[rv] = chosen_val
 
 	for rv in sample_dict:
-	    for val in sample_dict[rv]:
-	        sample_dict[rv][val] = int(sample_dict[rv][val]) / float(n)
-	
+		for val in sample_dict[rv]:
+			sample_dict[rv][val] = int(sample_dict[rv][val]) / float(n)
+
 	return sample_dict
