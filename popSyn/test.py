@@ -41,7 +41,7 @@ if __name__ == "__main__":
         df_work[att].replace(ls_vals, range(len(ls_vals)), inplace=True)
 
     # take some random from population
-    seed_df = df_work.sample(n = 17000)
+    seed_df = df_work.sample(n = 100)
     data = seed_df.to_numpy()
 
     # Struct learning
@@ -51,8 +51,7 @@ if __name__ == "__main__":
     # plot_nx(bn)
 
     # SAMPLING
-    prob_dict, samples = forward_sample(bn, n=5)
+    prob_dict, samples = forward_sample(bn, n=18000)
     sample_df = pd.DataFrame(samples)
-    print(sample_df)
-    print(df_work)
-    print('DONE')
+    sample_df.rename(columns={i: ATTRIBUTES[i] for i in range(len(ATTRIBUTES))}, inplace=True)
+    print(SRMSE(df_work, sample_df))
