@@ -11,7 +11,7 @@ from pyBN.learning.parameter.bayes import bayes_estimator
 from checker import SRMSE
 
 
-def popSyn_get_df():
+if __name__ == "__main__":
     ATTRIBUTES = ['AGEGROUP', 'CARLICENCE', 'SEX', 'PERSINC', 'DWELLTYPE', 'TOTALVEHS']
 
     # import data
@@ -32,30 +32,27 @@ def popSyn_get_df():
         df.loc[df['CARLICENCE'] != 'NO', 'CARLICENCE'] = 'YES'
     # print(df)
 
+    # Convert to cardi to work with this lib
     df_work = df.copy()
-
     ref_dict = {}
-
     for att in ATTRIBUTES:
-        ls_vals = pd.unique(df_work[att])
+        ls_vals = list(pd.unique(df_work[att]))
         ref_dict[att] = ls_vals
         df_work[att].replace(ls_vals, range(len(ls_vals)), inplace=True)
 
-    # print(df_work)
-    # print(df_work.shape)
+    # take some random from population
     seed_df = df_work.sample(n = 17000)
-    return seed_df
-
-
-if __name__ == "__main__":
-    seed_df = popSyn_get_df()
-
     data = seed_df.to_numpy()
-    # print(data)
+
+    # Struct learning
     bn = tabu(data, debug=False)
+    # Para learning
     bayes_estimator(bn, data)
-    # print(bn.F)
-    plot_nx(bn)
+    # plot_nx(bn)
+
+    # SAMPLING
     prob_dict, samples = forward_sample(bn, n=5)
-    print(samples)
+    sample_df = pd.DataFrame(samples)
+    print(sample_df)
+    print(df_work)
     print('DONE')
