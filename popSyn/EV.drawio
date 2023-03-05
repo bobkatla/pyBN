@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-05T23:20:09.545Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="lAnUBDpiyZIjy_C--8OV" version="20.8.18" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-05T23:24:45.290Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="QwLjTyk2J8rokfR8-xaB" version="20.8.18" type="github">
   <diagram id="IfFp8PQ106TDA0SB05V2" name="Page-1">
-    <mxGraphModel dx="3434" dy="1344" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4924" dy="2111" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -136,6 +136,9 @@
         <mxCell id="oCbvhflPHs6jfbzN3O0E-53" value="Energy demand" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;" parent="1" vertex="1">
           <mxGeometry x="220" y="1089" width="80" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="oCbvhflPHs6jfbzN3O0E-54" value="Zhang et al. (2020)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="450" y="750" width="120" height="30" as="geometry" />
+        </mxCell>
         <mxCell id="oCbvhflPHs6jfbzN3O0E-56" value="Predict position" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;" parent="1" vertex="1">
           <mxGeometry x="340" y="1300" width="80" height="80" as="geometry" />
         </mxCell>
@@ -183,6 +186,9 @@
         <mxCell id="oCbvhflPHs6jfbzN3O0E-70" value="Graph theory" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;" parent="1" vertex="1">
           <mxGeometry x="120" y="1320" width="80" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="oCbvhflPHs6jfbzN3O0E-75" value="&lt;ul style=&quot;box-sizing: inherit; list-style: none; margin: 0px; padding: 0px; color: rgb(142, 142, 142); font-family: Arial, sans-serif; font-size: 14.224px; text-align: start; background-color: rgb(255, 255, 255);&quot; class=&quot;ListPerson__List-sc-qsm4fa-1 cpfacm&quot; data-list-person=&quot;list&quot;&gt;&lt;li style=&quot;box-sizing: inherit; color: rgb(46, 46, 46); display: inline; font-size: 0.889rem; line-height: 1.25; margin: 0px; padding: 0px;&quot; class=&quot;ListPerson__ListPersonItem-sc-qsm4fa-2 iVTebd&quot; data-testid=&quot;person-info-panel&quot;&gt;Clement-Nyns et al (2011)&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1040" width="170" height="30" as="geometry" />
+        </mxCell>
         <mxCell id="oCbvhflPHs6jfbzN3O0E-76" value="PMPSS" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;" parent="1" vertex="1">
           <mxGeometry x="-120" y="1169" width="80" height="80" as="geometry" />
         </mxCell>
@@ -191,6 +197,36 @@
         </mxCell>
         <mxCell id="oCbvhflPHs6jfbzN3O0E-51" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=none;dashed=1;strokeColor=#FF6666;" parent="1" vertex="1">
           <mxGeometry x="313.75" y="855" width="392.5" height="385" as="geometry" />
+        </mxCell>
+        <mxCell id="oCbvhflPHs6jfbzN3O0E-86" value="Geidl et al (2007)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="790" y="1205" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oCbvhflPHs6jfbzN3O0E-87" value="Patil et al (2019)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="595" y="1410" width="155" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oCbvhflPHs6jfbzN3O0E-88" value="Zhang et al (2020)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="390" y="1390" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oCbvhflPHs6jfbzN3O0E-90" value="Sun et al (2021)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="223.75" y="1180" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oCbvhflPHs6jfbzN3O0E-92" value="Galus et al. (2009)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="-190" y="1249" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oCbvhflPHs6jfbzN3O0E-93" value="Sheppard&amp;nbsp; et al. (2017)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="-210" y="1070" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oCbvhflPHs6jfbzN3O0E-94" value="Xiang et al. (2019)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="130" y="1410" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oCbvhflPHs6jfbzN3O0E-95" value="Mu et al. (2014)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="-10" y="1290" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oCbvhflPHs6jfbzN3O0E-96" value="Knapen et al. (2012)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="-21" y="1175" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oCbvhflPHs6jfbzN3O0E-99" value="Jawad&amp;nbsp; and Liu (2020)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="719" y="790" width="111" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
